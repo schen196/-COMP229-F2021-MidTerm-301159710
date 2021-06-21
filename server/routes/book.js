@@ -7,8 +7,6 @@ let Book = require('../models/book');
 
 let bookController = require('../controllers/book');
 
-
-
 /* GET Route for the Book List page - READ Operation */
 router.get('/', bookController.displayBookList);
 
@@ -26,8 +24,12 @@ router.get('/edit/:id', bookController.displayEditPage);
 * POST Route for processing the Edit page - UPDATE Operation 
 */
 
+router.post('/edit/:id', bookController.processEditPage);
+
 /* add your code to 
 *  GET to perform  Deletion - DELETE Operation 
 */
+
+router.post('/delete/:id', bookController.performDelete);
 
 module.exports = router;
