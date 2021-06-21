@@ -75,7 +75,7 @@ module.exports.processEditPage = (req, res, next) => {
         "price": req.bdy.price
     });
 
-    contact.updateOne({ _id: id }, updatedBook, (err) => {
+    Book.updateOne({ _id: id }, updatedBook, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
@@ -95,7 +95,7 @@ Add your code here to perform DELETE operation
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
-    Book.remove(_id: id), (err) => {
+    Book.deleteOne({ _id: id }), (err) => {
         if (err) {
             console.log(err);
             res.end(err);
