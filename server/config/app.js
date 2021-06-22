@@ -1,3 +1,7 @@
+// File Name: COMP229 Midterm
+// Student Name: Steven Chen
+// Student Number: 301159710
+
 // installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');

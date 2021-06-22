@@ -1,3 +1,6 @@
+// File Name: COMP229 Midterm
+// Student Name: Steven Chen
+// Student Number: 301159710
 const mongoose = require("mongoose");
 
 const connectToMongoDB = () => {

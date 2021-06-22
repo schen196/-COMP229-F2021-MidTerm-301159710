@@ -1,3 +1,6 @@
+// File Name: COMP229 Midterm
+// Student Name: Steven Chen
+// Student Number: 301159710
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');

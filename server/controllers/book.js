@@ -1,3 +1,6 @@
+// File Name: COMP229 Midterm
+// Student Name: Steven Chen
+// Student Number: 301159710
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -23,6 +26,7 @@ module.exports.displayAddPage = (req, res, next) => {
 }
 
 module.exports.processAddPage = (req, res, next) => {
+    // get textfield data
     let newBook = Book({
         "name": req.body.name,
         "author": req.body.author,
@@ -30,7 +34,7 @@ module.exports.processAddPage = (req, res, next) => {
         "description": req.body.description,
         "price": req.body.price
     });
-
+    // create book
     Book.create(newBook, (err, Book) => {
         if (err) {
             console.log(err);
@@ -48,7 +52,7 @@ Add your code here to display EDIT
 */
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
-
+    // find book by id
     Book.findById(id, (err, bookToEdit) => {
         if (err) {
             console.log(err);

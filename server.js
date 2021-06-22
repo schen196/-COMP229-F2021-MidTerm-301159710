@@ -3,7 +3,9 @@
 /**
  * Module dependencies.
  */
-
+// File Name: COMP229 Midterm
+// Student Name: Steven Chen
+// Student Number: 301159710
 var app = require('./server/config/app');
 var debug = require('debug')('week-4:server');
 var http = require('http');
