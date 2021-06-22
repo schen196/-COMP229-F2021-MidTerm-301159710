@@ -30,6 +30,6 @@ router.post('/edit/:id', bookController.processEditPage);
 *  GET to perform  Deletion - DELETE Operation 
 */
 
-router.post('/delete/:id', bookController.performDelete);
+router.get('/delete/:id', bookController.performDelete);
 
 module.exports = router;

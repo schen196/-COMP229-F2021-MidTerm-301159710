@@ -94,14 +94,14 @@ Add your code here to perform DELETE operation
 
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
-    console.log("HER");
-    Book.deleteOne({ _id: id }), (err) => {
+    Book.deleteOne({ _id: id }, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
         } else {
             //refresh the books page
+            console.log("redirecting..");
             res.redirect("/book-list");
         }
-    }
+    });
 }
