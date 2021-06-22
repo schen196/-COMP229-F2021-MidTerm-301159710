@@ -72,7 +72,7 @@ module.exports.processEditPage = (req, res, next) => {
         "author": req.body.author,
         "published": req.body.published,
         "description": req.body.description,
-        "price": req.bdy.price
+        "price": req.body.price
     });
 
     Book.updateOne({ _id: id }, updatedBook, (err) => {
